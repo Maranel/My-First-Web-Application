@@ -1,0 +1,46 @@
+ body{
+    background-color: #e6e6e6;
+ }
+ .viewer{
+    width: 60%;
+/* display: block; */
+    background-color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+} 
+.photo{
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gray-container {
+    position: absolute;
+    background-color: rgba(166, 166, 166, 0.2);
+    color: white;
+    width: 100%;
+    bottom: 0%;
+}
+
+.bigimg{
+    margin-left: auto;
+    margin-right: auto;
+}
+.smallimg{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.right{
+    transform: rotate(0.5turn);
+}
+.thumbnail{
+    display: flex;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thumbnail img{
+    padding-left: 15px;
+}
