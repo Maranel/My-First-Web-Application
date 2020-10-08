@@ -1,20 +1,28 @@
- body{
-    background-color: #e6e6e6;
+ html{
+     height: 100%;
+     width: 100%;
  }
- .viewer{
+ body{
+    background-color: #cccccc;
+    height: 100%;
+    width: 100%;
+ }
+.viewer, .thumbnail{
     width: 60%;
-/* display: block; */
+}
+ .viewer{
     background-color: white;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
+    margin-top: 0.5%;
+    box-shadow: 0px 0px 5px 3px grey;
 } 
 .photo{
+    width: 90%;
     position: relative;
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 .gray-container {
     position: absolute;
@@ -23,24 +31,51 @@
     width: 100%;
     bottom: 0%;
 }
-
-.bigimg{
-    margin-left: auto;
-    margin-right: auto;
+.viewer{
+    height: 60%;
+    
 }
+.bigimg{
+    width:100%;
+    height:100%;
+}
+
 .smallimg{
-    margin-bottom: auto;
-    margin-top: auto;
+    margin: auto;
 }
 .right{
     transform: rotate(0.5turn);
 }
 .thumbnail{
     display: flex;
-    width: 30%;
+    height: 10%;
+    margin: auto;
+}
+
+#thumbnail img{
+    position: relative  ;
+    margin-top: 10px;
+    max-height: 100%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+    border: solid 5px white;
+    box-shadow: 0px 0px 5px 3px grey;
+    cursor: pointer; 
 }
-.thumbnail img{
-    padding-left: 15px;
+.td0,.td1,.td2,.td3,.td4,.td5,.td6{
+    display: flex;
+    justify-content: center;
 }
+.th0,.th1,.th2,.th3,.th4,.th5,.th6{
+    display: none;
+    position: absolute;
+    background: grey;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    top: 58%;
+}
+.td0:hover .th0,.td1:hover .th1,.td2:hover .th2,.td3:hover .th3,.td4:hover .th4,.td5:hover .th5,.td6:hover .th6 {
+    display: block;
+  }

@@ -8,27 +8,27 @@ let data = [
 {
   photo: './images/ExploStar.jpg',
   title: 'Explosive Space',
-  description: 'This is fucking explsoive space BOOOM'
+  description: 'This is fucking explsoive space BOOOM Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text'
 },
 {
   photo: './images/PurpleSpace.jpg',
   title: 'Purple Space',
-  description: 'Nice purple space which is so nice like a slice and dice'
+  description: 'Nice purple space which is so nice like a slice and dice.Akskdk odod ppp ieruen kmxlksdf skndfk weriwie.'
 },
 {
   photo: './images/SpaceGalaxy.jpg',
   title: 'Space Galaxy',
-  description: 'I think this is orange Galexy.But honestly i am not sure'
+  description: 'I think this is orange Galexy.But honestly i am not sure.Blasfl adsfk sdfkjwef4 mdnr  kdsksdfksdf k sdfl slsd. A sksks kdkdd oetiyjw . '
 },
 {
   photo: './images/SpaceNebula.jpg',
   title: 'Space Nebula',
-  description: 'Some text for Nebula Space'
+  description: 'Some text for Nebula SpaceSome text Some text Some text Some text Some text'
 },
 {
   photo: './images/SpaceSky.jpg',
   title: 'Space Sky',
-  description: 'Some text Some text Some text Some text '
+  description: 'Some text Some text Some text Some text Some text Some text Some text Some text Some text '
 },
 {
   photo: './images/SpaceUniverse.jpg',
@@ -39,15 +39,19 @@ let data = [
 
 
 let lvphoto = 0;
+let arraysize = 0;
+arraysize = (data.length) - 1;
 
 
+//load prvej fotky
 $('#photo').attr('src', data[0].photo);
 $('#photo-title').text( data[0].title);
 $('#photo-description').text(data[0].description);
+//
 
-
+//pravy button
 $('.right').click(() => {
-  if (lvphoto === 6 ){
+  if (lvphoto === arraysize ){
     lvphoto = 0;
     loadPhoto(lvphoto);
   }
@@ -55,40 +59,44 @@ $('.right').click(() => {
   {
   lvphoto++;
   loadPhoto(lvphoto);
-  console.log(lvphoto);
+  // console.log(lvphoto);
 };
 })
-
+//
+//lavy button
 $('.left').click(() => {
   if (lvphoto === 0)
   {
-    lvphoto = 6;
+    lvphoto = arraysize;
     loadPhoto(lvphoto);
   }
   else
   {
   lvphoto--;
   loadPhoto(lvphoto);
-  console.log(lvphoto);
+  // console.log(lvphoto);
 };
 })
+//
 
-
+//nacitanie fotiek po kliknuti
 let loadPhoto = (cislobrazka) =>{
   $('#photo').attr('src', data[cislobrazka].photo);
 $('#photo-title').text( data[cislobrazka].title);
 $('#photo-description').text( data[cislobrazka].description);
 }
 
-
+// Tvorba thumbnailov
 data.forEach(element =>{
     let lvindex = 0;
     lvindex = $(data).index(element);
-    console.log(lvindex);
-   $("#thumbnail").append('<img src="' + element.photo + '"id="'+lvindex+'" class=thimg>');
+    $(".thumbnail").append('<div class="td'+lvindex+'"><img src="' + element.photo + '"id="'+lvindex+'" class=thimg><div class=th'+lvindex+'>"'+element.title+'"</div></div>');
 }  );
+//
 
+//  Kliknutie na thumbnail
 $('.thumbnail').click((event) => {
   loadPhoto($(event.target).attr('id'));
 
 })
+//
