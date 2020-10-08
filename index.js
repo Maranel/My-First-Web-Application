@@ -34,7 +34,7 @@ let data = [
   photo: './images/SpaceUniverse.jpg',
   title: 'Space Universe',
   description: 'Some text Some text Some text Some text Some text'
-},
+}
 ];
 
 
@@ -59,7 +59,6 @@ $('.right').click(() => {
   {
   lvphoto++;
   loadPhoto(lvphoto);
-  // console.log(lvphoto);
 };
 })
 //
@@ -74,7 +73,6 @@ $('.left').click(() => {
   {
   lvphoto--;
   loadPhoto(lvphoto);
-  // console.log(lvphoto);
 };
 })
 //
