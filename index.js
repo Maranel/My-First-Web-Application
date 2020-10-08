@@ -34,7 +34,7 @@ let data = [
   photo: './images/SpaceUniverse.jpg',
   title: 'Space Universe',
   description: 'Some text Some text Some text Some text Some text'
-}
+},
 ];
 
 
@@ -91,8 +91,10 @@ data.forEach(element =>{
     let lvindex = 0;
     lvindex = $(data).index(element);
     $(".thumbnail").append('<div class="td'+lvindex+'"><img src="' + element.photo + '"id="'+lvindex+'" class=thimg><div class=th'+lvindex+'>"'+element.title+'"</div></div>');
+
 }  );
 //
+
 
 //  Kliknutie na thumbnail
 $('.thumbnail').click((event) => {

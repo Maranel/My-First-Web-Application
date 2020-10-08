@@ -67,6 +67,7 @@
     display: flex;
     justify-content: center;
 }
+
 .th0,.th1,.th2,.th3,.th4,.th5,.th6{
     display: none;
     position: absolute;
@@ -76,6 +77,6 @@
     padding: 5px;
     top: 58%;
 }
-.td0:hover .th0,.td1:hover .th1,.td2:hover .th2,.td3:hover .th3,.td4:hover .th4,.td5:hover .th5,.td6:hover .th6 {
+.td0:hover .th0,.td1:hover .th1,.td2:hover .th2,.td3:hover .th3,.td4:hover .th4,.td5:hover .th5,.td6:hover .th6{
     display: block;
   }
