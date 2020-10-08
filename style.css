@@ -15,7 +15,7 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0.5%;
+    margin-top: 3%;
     box-shadow: 0px 0px 5px 3px grey;
 } 
 .photo{
@@ -32,7 +32,7 @@
     bottom: 0%;
 }
 .viewer{
-    height: 60%;
+    height: 50%;
     
 }
 .bigimg{
@@ -75,8 +75,12 @@
     color: white;
     border-radius: 5px;
     padding: 5px;
-    top: 58%;
+    top: 53%;
 }
 .td0:hover .th0,.td1:hover .th1,.td2:hover .th2,.td3:hover .th3,.td4:hover .th4,.td5:hover .th5,.td6:hover .th6{
     display: block;
   }
+.left:hover, .right:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
